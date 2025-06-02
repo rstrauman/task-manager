@@ -79,13 +79,8 @@ body {
 
 /* Fixed image on the far right, aligned with input */
 #headerImage {
-/*  position: static; */
-  top: 6.275em; /* aligns vertically with input */
-  right: 1em;
   height: 65px;
   width: auto;
-  object-fit: contain;
-  z-index: 1000;
   border: 3px solid hsl(59, 100%, 50%);
 }
 
