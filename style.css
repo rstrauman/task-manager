@@ -89,6 +89,17 @@ body {
   border: 3px solid hsl(59, 100%, 50%);
 }
 
+
+/* Responsive fix for small screens */
+@media (max-width: 600px) {
+  #headerImage {
+    top: 1em;              /* move it higher to avoid overlap */
+    right: 0.5em;          /* reduce spacing from right */
+    height: 40px;          /* shrink image */
+    z-index: 500;          /* optional: reduce z-index if needed */
+  }
+}
+
 /* Task list label styling */
 #taskListLabel {
   margin-left: 5%;
