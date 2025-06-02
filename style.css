@@ -79,7 +79,7 @@ body {
 
 /* Fixed image on the far right, aligned with input */
 #headerImage {
-  position: fixed;
+/*  position: static; */
   top: 6.275em; /* aligns vertically with input */
   right: 1em;
   height: 65px;
