@@ -1,0 +1,248 @@
+/* General body styling */
+body {
+  background-color: #141414;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+  font-weight: normal;
+  color: white;
+  margin: 0;
+  padding: 1em;
+}
+
+/* Title styling */
+#taskTracker {
+  font-family: Copperplate, Papyrus, fantasy;
+  background-color: #f7f7f7;
+  border-radius: 10%;
+  border: 3px dashed hsl(59, 100%, 50%);
+  color: hsl(59, 100%, 50%);
+  text-shadow: 3px 3px 3px hsl(49, 100%, 50%), -3px -3px 3px hsl(49, 100%, 50%);
+  margin: 0 auto 1em auto;
+  padding: 0.5em 2em;
+  width: fit-content; /* background only as wide as content */
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+/* Input container flex layout */
+#inputArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 90vw;
+  max-width: 900px;
+  margin-left: 5%; /* Align left */
+  margin-bottom: 1em;
+}
+
+/* Label styling */
+#taskLabel {
+  color: white;
+  font-weight: bold;
+  min-width: 150px; /* fixed width for label */
+}
+
+/* Task input box styling */
+#insertTask {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  padding: 0.4em 0.6em;
+  border: 2px solid #fbff00;
+  border-radius: 4px;
+  outline: none;
+  color: black;
+  max-width: 500px;
+}
+
+/* Focus effect on input */
+#insertTask:focus {
+  border-color: #007BFF;
+}
+
+/* Add button styling */
+#Submit {
+  font-size: 1.2rem;
+  padding: 0.4em 1em;
+  background-color: rgb(96, 0, 252);
+  border: 1px solid rgb(147, 105, 216);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Hover effect on Add button */
+#Submit:hover {
+  background-color: rgb(47, 0, 122);
+}
+
+/* Fixed image on the far right, aligned with input */
+#headerImage {
+  position: fixed;
+  top: 6.275em; /* aligns vertically with input */
+  right: 1em;
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  z-index: 1000;
+  border: 3px solid hsl(59, 100%, 50%);
+}
+
+/* Task list label styling */
+#taskListLabel {
+  margin-left: 5%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5em;
+  max-width: 900px;
+}
+
+/* Task list styling */
+#myTaskList {
+  padding-left: 1.5em; /* for ordered list numbers */
+  color: white;
+  font-size: 1.3rem;
+  text-align: left;
+  width: 90vw;
+  max-width: 900px;
+  margin-left: 5%; /* Align left with input and label */
+  box-sizing: border-box;
+}
+
+/* Individual task wrapper for layout */
+.task-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.4em;
+  position: relative; /* for absolute positioning of checkmark */
+  padding-right: 50px; /* space for checkbox on far right */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* Task text styling and hover effect */
+.task-text {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-text:hover {
+  color: #ccc;
+}
+
+/* Checkbox positioned absolutely on far right of viewport */
+.checkmark {
+  font-size: 1.8rem;
+  cursor: pointer;
+  user-select: none;
+  position: fixed; /* changed from absolute inside task to fixed on screen */
+  right: 1em; /* near right edge */
+  /* To position vertically aligned with each task, we will update in JS */
+  color: white;
+  text-shadow: 0 0 0 white;
+  z-index: 1000;
+}
+
+/* Checkmark hover color */
+.checkmark:hover {
+  color: grey;
+}
+
+/* Description text style */
+.description-text {
+  color: white;
+  font-family: Tahoma, Verdana;
+  margin: 0.2em 0 0 1.5em;
+  font-size: 1rem;
+}
+
+/* Description input box styling */
+.description-input {
+  margin-top: 0.5em;
+  width: 200px;
+  font-size: 0.8em;
+  padding: 4px 8px;
+  border: 2px solid #575757;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.description-input:focus {
+  border-color: #007BFF;
+}
+
+/* Save and Close buttons styling */
+.description-save-btn,
+.description-close-btn {
+  margin-top: 0.5em;
+  font-size: 0.75em;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Save button */
+.description-save-btn {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: #28a745; /* green */
+  color: white;
+}
+
+.description-save-btn:hover {
+  background-color: #218838;
+}
+
+/* Close button */
+.description-close-btn {
+  background-color: #dc3545; /* red */
+  color: white;
+}
+
+.description-close-btn:hover,
+.description-close-btn:focus {
+  background-color: #92000f !important; /* darker red */
+}
+
+.remove-task-btn{
+
+  background: none;
+}
+
+.remove-task-btn:hover{
+
+  cursor: pointer;
+}
+
+.move-task-up-btn{
+
+  background: none;
+}
+
+.move-task-up-btn:hover{
+
+  cursor: pointer;
+}
+.move-task-down-btn{
+
+  background: none;
+}
+
+.move-task-down-btn:hover{
+
+  cursor: pointer;
+}
+
+
+
+
+
