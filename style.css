@@ -91,11 +91,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  #headerImage {
-    height: 40px;
-    margin-top: 1em;
-    border: 2px solid hsl(59, 100%, 50%);
-  }
 }
 
 /* Task list label styling */
